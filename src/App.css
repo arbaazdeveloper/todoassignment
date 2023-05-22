@@ -1,38 +1,242 @@
-.App {
+
+.top{
+  width: 100%;
+ background: #3772FF;
+ height: 36.48px;
+ margin: 0px;
+
+
+}
+.top{
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
   text-align: center;
+  color: #FFFFFF;
+  
+}
+.top-section{
+  padding:20px;
+  border-bottom: 2px solid #242731;
+  height: 30px;
+  z-index: 1;
+  background-color: #000;
+}
+.top-section p{
+  border-bottom: 2px solid #3772FF;
+  width: 67px;
+  height:25px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Adjust the column sizes as needed */
+  grid-template-rows: 100vh; /* Adjust the row size as needed */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+  
+  padding: 20px;
+  background-color: #000;
+}
+.menu{
+  border-right: 2px solid #242731;
+}
+.content-edit-container {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Adjust the row sizes as needed */
+  height: 100%;
+  background-color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+
+  padding: 20px;
+  border-right: 2px solid #242731;
+  height: 100%;
+  background-color: #000;
+  overflow: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.edit {
+  padding: 20px;
+  background-color: #000;
+}
+.avtar{
+  width: 29.82px;
+height: 28.24px;
+ background: #3772FF;
+ border-radius: 50%;
+ color: #FFFFFF;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+.avtar-container{
+  display: flex;
+  justify-content: space-between;
+}
+.avtar-name{
+  color: #FFFFFF;
+}
+.main-btn{
+  color: #808191;
+  display: flex;
+  justify-content: space-between;
+  width:100px;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+.bottom-btn-container{
+  display: flex;
+  gap: 5px;
+  margin: 5px;
+}
+.menu-container{
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.menu-bottom-btn{
+  display: flex;
+  padding: 5px;
+  border-radius: 10px;
+  align-items: center;
+  
+}
+.menu-bottom-btn:nth-child(1){
+  background: #353945;
+
+
+}
+.menu-bottom-btn:nth-child(2){
+  background: #A3E3FF;
+
+
+
+}
+.dark-toggle{
+  height: 25.862741470336914px;
+width: 58.191165924072266px;
+border-radius: 12.93137264251709px;
+background: #353945;
+display: flex;
+align-items: center;
+padding: 1px;
+justify-content: center;
+
+}
+.toggle-mode{
+  height: 20px !important;
+  width: 20px;
+}
+.bottom-btn-container{
+  
+
+}
+.list-title{
+  height: 50.63478469848633px;
+  width: 286.6482238769531px;
+  left: 271.1502685546875px;
+  top: 117px;
+  border-radius: 12px;
+  background: #242731;
+  text-align: center;
+
+  
+}
+.list-main-container{
+  background: #191B20;
+  width: 286.6482238769531px;
+  padding: 10px;
+border-radius: 16px;
+opacity: 0.8;
+margin-top: 20px;
+}
+.list-button-container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+}
+.editible-btn-container{
+  background: #353945;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+ 
 
-.App-link {
-  color: #61dafb;
 }
+.add-todo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-section form input,textarea{
+  border: none;
+  padding: 10px;
+  background: #242731;
+  border-radius: 12px;
+  margin-top: 10px;
+  width: 230px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.edit-section form button{
+  height: 34px;
+width: 257px;
+left: 1167px;
+top: 347px;
+border-radius: 10px;
+background: #3772FF;
+border: none;
+color: #fff;
+
+}
+.top-section-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wallet{
+  height: 39.269187927246094px;
+width: 196.690673828125px;
+left: 0px;
+top: 0px;
+border-radius: 12.25487995147705px;
+background: #191B20;
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin-bottom: 10px;
+
+}
+.wallet-label{
+  height: 22.77142333984375px;
+width: 50.873931884765625px;
+left: 134.8310546875px;
+top: 9.483642578125px;
+border-radius: 5px;
+background: #A3E3FF;
+text-align: center;
+
+}
+.content-display{
+  display: flex;
+}
+.add-list-btn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blue-font{
+  color: #3772FF;
+
 }
