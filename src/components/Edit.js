@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 
 const Edit = () => {
+  const [state,setState]=useState({title:'',description:''})
+  const editState=useSelector((state)=>state.editState.value)
+
+  useEffect(()=>{
+    setState(editState)
+  },[editState])
   return (
     <>
     <div className='edit-section'>
@@ -10,8 +17,8 @@ const Edit = () => {
    Edit Todo
 
    <form>
-    <input className='edit-input'></input>
-    <textarea className='edit-input'></textarea>
+    <input className='edit-input' value={state.title} ></input>
+    <textarea className='edit-input' value={state.description}></textarea>
   <button>Save</button>
    </form>
     </div>

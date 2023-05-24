@@ -49,7 +49,10 @@
   height: 100%;
   background-color: #000;
 }
-
+.edit-input{
+  color: #fff;
+  font-size: 15px;
+}
 .content {
 
   padding: 20px;
@@ -239,4 +242,37 @@ text-align: center;
 .blue-font{
   color: #3772FF;
 
+}
+.list-display{
+  display: flex;
+  gap: 5px;
+}
+.add-container{
+height: 100px;
+width: 320px;
+}
+.inputStyle{
+  background-color: #242731;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.inputStyle::placeholder{
+  font-weight: 600;
+  font-size: 20px;
+}
+.listInput{
+  background-color: #191B20;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.listInput::placeholder{
+  font-weight: 500;
+  font-size: 150px;
 }
