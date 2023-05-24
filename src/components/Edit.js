@@ -1,10 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { editTask } from '../feature/storeSlice'
 
 const Edit = () => {
-  const [state,setState]=useState({title:'',description:''})
+  const [state,setState]=useState({id:'',title:'',description:''})
   const editState=useSelector((state)=>state.editState.value)
+  const dispatch=useDispatch()
 
+
+  const edit=(e)=>{
+    e.preventDefault()
+
+    dispatch(editTask(state))
+  }
+  const handleChange=(e)=>{
+    setState({...state,[e.target.name]:e.target.value})
+
+  }
   useEffect(()=>{
     setState(editState)
   },[editState])
@@ -17,9 +29,9 @@ const Edit = () => {
    Edit Todo
 
    <form>
-    <input className='edit-input' value={state.title} ></input>
-    <textarea className='edit-input' value={state.description}></textarea>
-  <button>Save</button>
+    <input className='edit-input' name='title' value={state.title} onChange={(e)=>handleChange(e)}></input>
+    <textarea name='description' onChange={(e)=>handleChange(e)} className='edit-input' value={state.description}></textarea>
+  <button onClick={(e)=>edit(e)}>Save</button>
    </form>
     </div>
 

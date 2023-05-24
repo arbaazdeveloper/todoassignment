@@ -7,9 +7,17 @@ const Add = ({type,description,title,index,adress,listAdress}) => {
  const [input,setInputs]=useState({title:title,description:description})
   const dispatch=useDispatch()
   const addingTask=()=>{
+    if(input.title==='Add Todo'){
+      alert('plaese add todo title');
+      return
+    }
+    if(input.description==='Add todo description'){
+      alert('plaese add todo Description');
+      return
+    }
     const obj={index,title:input.title,description:input.description}
     dispatch(addTask(obj))
-    console.log(data)
+ 
   }
  const onchangeHandle=(e)=>{
 setInputs({...input,[e.target.name]:e.target.value})
@@ -39,7 +47,7 @@ setInputs({...input,[e.target.name]:e.target.value})
 </div>
 <div className='editble-btn'>
 <div className='editible-btn-container' onClick={type==='add'?addingTask:editingTask}>
-  { type==='add'? <div  onClick={addingTask}><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  { type==='add'? <div  onClick={()=>addingTask}><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.4939 5.34077V8.73452H0V5.34077H13.4939ZM8.59931 0V14.3322H4.9081V0H8.59931Z" fill="white"/>
 </svg>
 </div>:<div onClick={editingTask}><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

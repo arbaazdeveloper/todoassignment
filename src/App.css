@@ -149,6 +149,9 @@ justify-content: center;
   border-radius: 12px;
   background: #242731;
   text-align: center;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 
   
 }
@@ -235,8 +238,9 @@ text-align: center;
   display: flex;
 }
 .add-list-btn{
+ width: 286.6482238769531px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .blue-font{
@@ -261,7 +265,7 @@ width: 320px;
 
 .inputStyle::placeholder{
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
 }
 .listInput{
   background-color: #191B20;
@@ -275,4 +279,8 @@ width: 320px;
 .listInput::placeholder{
   font-weight: 500;
   font-size: 150px;
+}
+.bottom-menu{
+  position: absolute;
+  bottom: 0;
 }

@@ -21,7 +21,6 @@ const storeSlice = createSlice({
    },
    addTask:(state,action)=>{
     const {index,description,title}=action.payload
-    // console.log(action.payload)
     const task={
       id:uuidv4(),
       title:title,
@@ -31,6 +30,8 @@ const storeSlice = createSlice({
     current.todo.push(task)
     let jsonArrayOfObjects = JSON.stringify(state.value);
     localStorage.setItem('todoList',jsonArrayOfObjects)
+    alert('Task Added')
+
    },
    updateSate:(state)=>{
     if(localStorage.getItem('todoList')){
@@ -40,13 +41,15 @@ const storeSlice = createSlice({
     }
    },
    editTask:(state,action)=>{
+  let updateData=action.payload
+  let current=state.value[updateData.obj.adress]
+  current=current.todo[updateData.obj.listAdress]
+  current.title=updateData.title;
+  current.description=updateData.description
+  let jsonArrayOfObjects = JSON.stringify(state.value);
+  localStorage.setItem('todoList',jsonArrayOfObjects)
+  alert('Updated Succesfully')
   },
-  setEdit:(state,action)=>{
-     
-     
-
-   }
-
     
   }
 });

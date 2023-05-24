@@ -57,7 +57,7 @@ Section 8</div>
     </div>
 
 
-    <div>
+    <div className='bottom-menu'>
         <div className='bottom-btn-container'>
             <div className='menu-bottom-btn'><div className='avtar'>N</div> $0.90</div>
             <div className='menu-bottom-btn'>BUY $XYZ</div>

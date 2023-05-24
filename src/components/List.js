@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 const List = ({title,index}) => {
   const todos=useSelector((state)=>state.list.value)
   const getList=()=>{
-     console.log(todos)
+ 
   }
   useEffect(()=>{
     getList()

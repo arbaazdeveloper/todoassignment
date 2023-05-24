@@ -8,13 +8,17 @@ const Content = () => {
     const listItem=useSelector((state)=>state.list.value)
 
     const addList=()=>{
+        if(input===''){
+            alert('plaese add list name')
+            return
+        }
        dispatch(list(input))
-       console.log(listItem)
+      
 
     }
     const handleInput=(e)=>{
         setinput(e.target.value)
-        console.log(input)
+      
     }
   return (
     <>

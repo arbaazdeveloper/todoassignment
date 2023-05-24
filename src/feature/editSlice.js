@@ -11,6 +11,7 @@ const editSlice = createSlice({
             let subject=current[obj.adress]
             subject=subject.todo
             subject=subject[obj.listAdress]
+            subject={...subject,obj}
             state.value=subject
         }
 
